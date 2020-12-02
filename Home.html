@@ -34,11 +34,12 @@
                 </div>
             </section>
             <div id="logo-group">
-                <button class="openbtn text-white mt-2" id="line" onclick="openNav()">☰</button>  
-                <a href="javascript:void(0)" id="close" class="closebtn text-white" onclick="closeNav()"> X </a>
+                <button class="openbtn text-white mt-2 d-non" id="line" onclick="openNav()">☰</button>  
+                <button class="openbtn text-white mt-2 " id="cross" onclick="closeNav()">X</button>
+                <!-- <a href="javascript:void(0)" id="close" class="closebtn text-white" onclick="closeNav()"> X </a> -->
                 <!-- PLACE YOUR LOGO HERE -->
-                <span class=""> <img  class="logo" src="/Img/header-logo.png" alt="image"> </span>
-                
+                <img  class="logo" src="/Img/header-logo.png" alt="image"> 
+            
                 <!-- END LOGO PLACEHOLDER -->
             </div>
         
@@ -93,7 +94,7 @@
 
             </ul>
         </nav>
-        <span class="minifyme" data-action="minifyMenu" onclick="closeNav()"><i class="fa fa-arrow-circle-left hit"></i>
+        <!-- <span class="minifyme" data-action="minifyMenu" onclick="closeNav()"><i class="fa fa-arrow-circle-left hit"></i> -->
         </span>
      </div>
   
@@ -105,23 +106,32 @@
     
   
   <script>
-  function openNav() { 
-
-    document.getElementById("mySidebar").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
+  function openNav() 
+  { 
+    document.getElementById("mySidebar").style.transform = "translatex(0px)";
+    document.getElementById("main").style.transform = "translatex(0px)";
+    document.getElementById("line").classList.add("d-non");
+    document.getElementById("cross").classList.add("d-show");
+    document.getElementById("line").classList.remove("d-show");
 
   }
   
   function closeNav() {
-    document.getElementById("mySidebar").style.width = "0";
-    document.getElementById("main").style.marginLeft= "0";
+    document.getElementById("mySidebar").style.transform = "translatex(-250px)";
+    // document.getElementById("mySidebar").style.width = "0";
+    document.getElementById("main").style.transform = "translatex(-250px)";
+    document.getElementById("cross").classList.add("d-non");
+    document.getElementById("line").classList.add("d-show");
+    document.getElementById("cross").classList.remove("d-show");
   } 
-  function openOffcanvas1() {
-    document.getElementById("myOffcanvas").style.width = "250px";
-}
-function openOffcanvas2() {
-    document.getElementById("myOffcanvas2").style.display = "block";
-}
+
+//   function openOffcanvas1() {
+//     // document.getElementById("myOffcanvas").style.width = "250px";
+// }
+// function openOffcanvas2() {
+//     document.getElementById("myOffcanvas2").style.display = "block";
+// }
+
 
   </script>
   <!-- <header id="header">
