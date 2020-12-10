@@ -167,12 +167,11 @@ aside {
  
 @media (min-width: 320px) and (max-width: 767px) 
 {   
-    #main {
-
-        margin-left: 0px!important;
-        transform: translateX(0px)!important;
-        
-         }
+    #main 
+    {
+      margin-left: 0px!important;
+      transform: translateX(0px)!important;    
+    }
 
    .sidebar
    {
